@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    font-family: "Roboto mono";
+}
+
+html {
+    background-image: url("./img/Fondo.jpg");
+}
+
+header{
+    margin: 10px;
+    height: 40px;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li {
+    list-style-type: none;
+    padding: 0px 5px ;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#window {
+    height: 600px;
+    width: 900px;
+    background-color: white;
+    margin: 50px 0;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px gray;
+}
+
+#window-header{
+    border-bottom: 3px solid black;
+    padding: 5px 0;
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    margin:0% 20%;
+    bottom: 0;
+    width: 60%;
+    height: 60px;
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    text-align: center;
+    border-radius: 60% 60% 0 0;
+}
+
+footer p {
+    margin: 2.5% 0;
+}
