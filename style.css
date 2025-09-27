@@ -37,6 +37,10 @@ main {
     justify-content: center;
 }
 
+#date-time{
+    margin-right: 20px;
+}
+
 #window {
     height: 600px;
     width: 900px;
