@@ -1,6 +1,7 @@
 *{
     margin: 0;
     font-family: "Roboto mono";
+    box-sizing: border-box;
 }
 
 html {
@@ -41,6 +42,55 @@ main {
     margin-right: 20px;
 }
 
+
+#welcome {
+    width: 450px;
+    background-color: white;
+    margin: 50px 0;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgb(226, 164, 193); /*del color del tema o en gris?*/
+    display: grid;
+    grid-template-areas: "welcome-header" "welcome-text" "btn-welcome";
+    grid-template-rows: 10% 80% 10%;
+    padding-bottom: 15px;
+}
+
+#welcome-header{
+    border-bottom: 3px solid black;
+    padding: 5px 0;
+    text-align: center;
+    background-color:rgb(245, 180, 210) ;
+    color: white;
+    font-weight: bold;
+    cursor: default;
+}
+
+#welcome-text {
+    margin: 5% 5% 0 5%;
+    cursor: default;
+    
+}
+
+#btn-welcome{
+    font-weight: bold;
+    color: white;
+    background-color: rgb(243, 128, 182);
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    width: 125px;
+    cursor: pointer;
+    justify-self: end;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    height: 100%;
+}
+
+#btn-welcome:hover {
+    background-color: rgb(241, 81, 156);
+}
+
 #window {
     height: 600px;
     width: 900px;
@@ -48,7 +98,7 @@ main {
     margin: 50px 0;
     border: 3px solid black;
     border-radius: 10px;
-    box-shadow: 10px 10px 5px gray;
+    box-shadow: 10px 10px 5px rgb(226, 164, 193); /*del color del tema o en gris?*/
 }
 
 #window-header{
@@ -59,17 +109,34 @@ main {
 
 footer {
     position: fixed;
-    margin:0% 20%;
     bottom: 0;
-    width: 60%;
-    height: 60px;
-    background-color: white;
-    border-color: black;
-    border-style: solid;
-    text-align: center;
-    border-radius: 60% 60% 0 0;
+    height: 40px;
+    width: 100%;
+    background: linear-gradient(rgb(245, 180, 210),rgb(160, 85, 120),rgb(245, 180, 210)); /*Me gustaria que la zona oscura fuese mas ancha*/
+    display: grid;
+    grid-template-columns: 10% 75% 15%;
+    grid-template-areas: "inicio autor sistemaOperativo";
+    color: white;
 }
 
-footer p {
-    margin: 2.5% 0;
+#autor, #sistemaOperativo{
+    align-self: center;
+    justify-self: center;
+}
+
+#inicio {
+    background: linear-gradient(rgb(243, 128, 182),rgb(158, 64, 108),rgb(243, 128, 182)); /*Me gustaria que la zona oscura fuese mas ancha*/
+    border-radius: 0 5% 5% 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+#inicio:hover {
+    background: linear-gradient( rgb(241, 81, 156),rgb(163, 38, 96), rgb(241, 81, 156)); /*Me gustaria que la zona oscura fuese mas ancha*/
+    /* background-color: rgb(241, 81, 156); */
 }
