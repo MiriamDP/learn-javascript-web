@@ -11,7 +11,7 @@ html {
 header{
     margin: 10px;
     height: 40px;
-    border: 3px solid black;
+    border: 3px solid rgb(243, 128, 182);
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
@@ -20,14 +20,18 @@ header{
     
 }
 
-ul {
+header h2{
+    color: rgb(243, 128, 182);
+}
+
+header ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-ul li {
+header ul li {
     list-style-type: none;
     padding: 0px 5px ;
 }
@@ -152,18 +156,33 @@ nav a{
     width: 100%;
 }
 
+.icono-escritorio:hover p{
+    color: rgb(241, 81, 156);
+
+}
+
 .icono-escritorio p {
     font-weight: bold;
-    color:rgb(163, 38, 96);
+    color: rgb(243, 128, 182);
     justify-self: center;
     margin-top: -10px;
     padding-top: 0;
 }
 
+
+
 .carpeta-nav:hover img{
-    content: url(./img/carpetaAbierta.png);
+    content: url(./img/carpetaabierta3.png);
 }
 
 .login-nav:hover img{
     content: url(./img/logout.png);
+}
+
+.registro-nav:hover img{
+    content: url(./img/registro2.png);
+}
+
+.web-icon:hover img {
+    content: url(./img/web1.png);
 }

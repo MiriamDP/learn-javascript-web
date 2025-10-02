@@ -10,10 +10,10 @@ function updateDateTime(){
 setInterval(updateDateTime,1000); //se actualiza cada segundo
 updateDateTime();
 
-const welcomeBtn=document.getElementById("btn-welcome");
+// const welcomeBtn=document.getElementById("btn-welcome");
 
-welcomeBtn.addEventListener("click",()=>{
-    document.cookie="bienvenido=true; path=/"
-    const welcome=document.getElementById("welcome");
-    welcome.style.display="none";
-});
+// welcomeBtn.addEventListener("click",()=>{
+//     document.cookie="bienvenido=true; path=/"
+//     const welcome=document.getElementById("welcome");
+//     welcome.style.display="none";
+// });

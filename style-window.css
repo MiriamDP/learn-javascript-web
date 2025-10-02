@@ -34,7 +34,7 @@
 }
 
 .cierre:hover {
-    content: url(./img/cierreHover.png);
+    content: url(./img/cierre2.png);
 }
 
 .atras:hover {
@@ -46,13 +46,12 @@
     flex-direction: row;
     flex-wrap: wrap;
     padding: 2%;
-    align-items: flex-start;
-    row-gap: 1%;
+    align-items: flex-start; /*Controla el tamaño de los item*/
+    align-content: flex-start; /*Controla la distancia entre filas*/
     overflow-y: auto;
 }
 
-.icono-submenu {
-    position: relative;
+.icono-submenu, .web-icon, .icono-fichero {
     display: flex;
     flex-direction: column;
     width: 15%;
@@ -64,14 +63,18 @@
 }
 
 .icono-submenu:hover img{
-    content: url(./img/carpetaAbierta.png);
+    content: url(./img/carpetaabierta3.png);
 }
 
-.icono-submenu img {
+.icono-submenu:hover p, .web-icon:hover p, .icono-fichero:hover p{
+    color: rgb(241, 81, 156);
+}
+
+.icono-submenu img, .web-icon img, .icono-fichero img {
     width: 100%;
 }
 
-.icono-submenu p {
+.icono-submenu p, .web-icon p, .icono-fichero p {
     font-weight: bold;
     color:rgb(163, 38, 96);
     justify-self: center;
@@ -85,22 +88,25 @@
     scrollbar-color: rgb(243, 128, 182) #f1f1f1;
 }
 
-.detalle {
-    display: none;
-    position: absolute;
-    bottom: -60px; /* debajo del icono */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
+#detalle {
+    position: fixed;
+    pointer-events: none;
+    background-color: white;
+    color: rgb(163, 38, 96);
     padding: 6px 10px;
-    border-radius: 4px;
     font-size: 12px;
-    white-space: nowrap;
-    z-index: 10;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    width: 125px;
+    white-space: normal;
+    z-index: 9999;
+    display: none;
+    box-shadow: 0 2px 6px rgb(243, 128, 182);
 }
 
-.icono-submenu:hover .detalle{
-    display: block;
+
+.web-icon:hover img {
+    content: url(./img/web1.png);
+}
+
+.icono-fichero:hover img {
+    content: url(./img/fichero2.png);
 }
