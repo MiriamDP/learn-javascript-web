@@ -126,29 +126,8 @@ footer {
     /* background-color: rgb(241, 81, 156); */
 }
 
-nav ul li img {
-    width: 35%;
-}
-
-.icono-escritorio{
-    display: flex;
-    flex-direction: column;
-}
-
-.icono-escritorio p{
-    font-weight: bold;
-    color:rgb(163, 38, 96);
-}
-
-nav ul li a {
-    text-decoration: none;
-}
-
-
-
 
 /*Nueva distribucion*/
-
 nav {
     display: flex;
     flex-direction: row;
@@ -165,10 +144,26 @@ nav a{
 .icono-escritorio {
     display: flex;
     flex-direction: column;
-    width: 10%;
+    width: 7%;
     padding: 1%;
 }
 
 .icono-escritorio img {
     width: 100%;
+}
+
+.icono-escritorio p {
+    font-weight: bold;
+    color:rgb(163, 38, 96);
+    justify-self: center;
+    margin-top: -10px;
+    padding-top: 0;
+}
+
+.carpeta-nav:hover img{
+    content: url(./img/carpetaAbierta.png);
+}
+
+.login-nav:hover img{
+    content: url(./img/logout.png);
 }
