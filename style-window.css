@@ -1,0 +1,86 @@
+#window {
+    height: 600px;
+    width: 900px;
+    background-color: white;
+    margin: 50px 0;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgb(226, 164, 193); /*del color del tema o en gris?*/
+    display: grid;
+    grid-template-rows: 7% 93%;
+    grid-template-areas: "window-header" "window-main";
+}
+
+#window-header{
+    border-bottom: 3px solid black;
+    padding: 5px 0;
+    text-align: center;
+    background-color: rgb(243, 128, 182);
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+
+}
+
+#window-header p{
+    font-weight: bold;
+    color: white;
+    cursor: default;
+}
+
+
+.icono-carpeta {
+    width: 75%;
+    cursor: pointer;
+}
+
+.cierre:hover {
+    content: url(./img/cierreHover.png);
+}
+
+.atras:hover {
+    content: url(./img/flechaHover.png);
+}
+
+#window-main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2%;
+    align-items: flex-start;
+    row-gap: 1%;
+    overflow-y: auto;
+}
+
+.icono-submenu {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    padding: 1%;
+}
+
+#window-main a {
+    text-decoration: none;
+}
+
+.icono-submenu:hover img{
+    content: url(./img/carpetaAbierta.png);
+}
+
+.icono-submenu img {
+    width: 100%;
+}
+
+.icono-submenu p {
+    font-weight: bold;
+    color:rgb(163, 38, 96);
+    justify-self: center;
+    margin-top: -20px;
+    padding-top: 0;
+}
+
+/*Para cambiar el color del scroll*/
+#window-main {
+    scrollbar-width: auto;
+    scrollbar-color: rgb(243, 128, 182) #f1f1f1;
+}
+

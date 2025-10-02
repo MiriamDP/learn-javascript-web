@@ -91,21 +91,6 @@ main {
     background-color: rgb(241, 81, 156);
 }
 
-#window {
-    height: 600px;
-    width: 900px;
-    background-color: white;
-    margin: 50px 0;
-    border: 3px solid black;
-    border-radius: 10px;
-    box-shadow: 10px 10px 5px rgb(226, 164, 193); /*del color del tema o en gris?*/
-}
-
-#window-header{
-    border-bottom: 3px solid black;
-    padding: 5px 0;
-    text-align: center;
-}
 
 footer {
     position: fixed;
@@ -139,4 +124,51 @@ footer {
 #inicio:hover {
     background: linear-gradient( rgb(241, 81, 156),rgb(163, 38, 96), rgb(241, 81, 156)); /*Me gustaria que la zona oscura fuese mas ancha*/
     /* background-color: rgb(241, 81, 156); */
+}
+
+nav ul li img {
+    width: 35%;
+}
+
+.icono-escritorio{
+    display: flex;
+    flex-direction: column;
+}
+
+.icono-escritorio p{
+    font-weight: bold;
+    color:rgb(163, 38, 96);
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+
+
+
+/*Nueva distribucion*/
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    row-gap: 1%;
+    padding: 0 2%;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+.icono-escritorio {
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    padding: 1%;
+}
+
+.icono-escritorio img {
+    width: 100%;
 }
