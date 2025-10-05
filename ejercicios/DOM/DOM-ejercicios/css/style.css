@@ -20,6 +20,7 @@
     text-align: center;
     padding: 10px 0 ;
     color:  rgb(241, 81, 156);
+    cursor: default;
 }
 
 #content-exercise {
@@ -67,3 +68,11 @@ ul{
 li::marker {
     color: rgb(243, 128, 182);
 }
+
+.botones {
+    display: flex;
+}
+/* 
+.botones button {
+    width: 50%;
+} */

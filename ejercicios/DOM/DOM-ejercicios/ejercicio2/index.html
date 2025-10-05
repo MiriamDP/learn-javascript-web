@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende javascript</title>
+    <link rel="stylesheet" href="../../../../style.css" type="text/css">
+    <link rel="stylesheet" href="../../../../style-window.css" type="text/css">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+        <script defer src="../../../../js/script.js"></script>
+        <script defer src="./js/script.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li>Learn</li>
+            <li>&</li>
+            <li>Play</li>
+        </ul>
+        <h2>Aprende javascript</h2>
+        <div id="date-time"></div>
+    </header>
+    <nav>
+        <div class="icono-escritorio carpeta-nav"><a href="../../../../referencias/index.html"><img src="../../../../img/carpetaCerrada.png"><p>Referencias</p></a></div>
+        <div class="icono-escritorio carpeta-nav"><a href="../../../../referencias/index.html"><img src="../../../../img/carpetaabierta2.png"><p>Ejercicios</p></a></div>
+        <div class="icono-escritorio registro-nav"><a href="../../../../referencias/index.html"><img src="../../../../img/registro.png"><p>Registro</p></a></div>
+        <div class="icono-escritorio login-nav"><a href="../../../../referencias/index.html"><img src="../../../../img/login.png"><p>LogIn</p></a></div>
+    </nav>
+    <main> <!--Aqui podria ir con el #ejericio-index-->
+        <div id="window">
+            <div id="window-header">
+                <a href="../../index.html"><img src="../../../../img/flechaatras.png" class="icono-carpeta atras"></a>
+                <p>home/ejercicios/DOM/Ejercicio-2</p>
+                <a href="../../../../index.html"><img src="../../../../img/cierre.png" class="icono-carpeta cierre"></a>
+            </div>
+            <div id="window-main-exercise">
+                <h3 id="header-exercise">Ejercicio 2 - Obtener elemento por clase y tag</h3>
+                <div id="content-exercise">
+                    <h6>Cada uno de las siguientes frases es un parrafo y algunas de ellas tienen la clase color. Este es un h6</h6>
+                    <p class=color>La gente corre tanto</p>
+                    <p>porque no sabe donde va,</p>
+                    <p class="color">el que sabe donde va,</p>
+                    <p>va despacio</p>
+                    <p>para paladear</p>
+                    <p>el "ir llegando"</p>
+                    <cite>Gloria Fuertes</cite>
+                    <div class="botones">
+                        <button id="botonClase" class="btn">Obten los elementos con la clase "color"</button>
+                        <button id="botonTag" class="btn">Obten todos los parrafos</button>
+                    </div>
+                    <div id="resultado">Cuando se pulse uno de los botones los elementos cambiaran de color</div>
+                    <div class="color oculta">Estoy escondida. ¡Oh no!</div>
+                    <p class="oculta">A mi no me ven. Je je je</p>
+                </div>
+                <div id="learn-exercise">
+                    <p>Cuando seleccionamos elementos del DOM con <code>getElementByClassName</code> seleccionamos todos los elementos que tengan la clase, esten o no visibles en la pagina en ese momento. Puedes ver esto si abres el inspector del navegador tras pulsar el boton. Como puedes ver se muestra que hay tres elementos con la clase color</p>
+                    <br><p>Con la funcion <code>getElementByTagName</code> seleccionamos todos los elementos del DOM que tengan la clase especificada</p><br>
+                    <p>Al pulsar vemos que no solo ha resaltado todos los parrafos del texto sino todos los parrafos que esten en el DOM en ese momento, por lo que ha afectado tambien a los nombres de las carpetas y a este mismo texto entre otros. Al igual que con las clases tambien selecciona a los elementos no visibles, puedes comprobarlo entrando en la consola del inspector del navegador. Veras que aparece un parrafo con la clase oculta p.oculta</p></div>
+            </div>
+        </div>
+    <div id="detalle"></div>
+
+    </main>
+
+    <footer>
+        <a href="../../../../index.html" id="inicio">Inicio</a>
+        <div id="autor">by Miriam Diaz Plaza</div>
+        <div id="sistemaOperativo">AT-SO v1.0</div>
+    </footer>
+
+
+</body>
+
+</html>
