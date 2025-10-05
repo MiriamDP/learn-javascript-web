@@ -31,7 +31,7 @@
     </header>
     <nav>
         <div class="icono-escritorio carpeta-nav"><a href="../../../../referencias/index.html"><img src="../../../../img/carpetaCerrada.png"><p>Referencias</p></a></div>
-        <div class="icono-escritorio carpeta-nav"><a href="../../../../referencias/index.html"><img src="../../../../img/carpetaabierta2.png"><p>Ejercicios</p></a></div>
+        <div class="icono-escritorio carpeta-nav"><a href="../../../../ejercicios/index.html"><img src="../../../../img/carpetaabierta2.png"><p>Ejercicios</p></a></div>
         <div class="icono-escritorio registro-nav"><a href="../../../../referencias/index.html"><img src="../../../../img/registro.png"><p>Registro</p></a></div>
         <div class="icono-escritorio login-nav"><a href="../../../../referencias/index.html"><img src="../../../../img/login.png"><p>LogIn</p></a></div>
     </nav>
@@ -43,19 +43,23 @@
                 <a href="../../../../index.html"><img src="../../../../img/cierre.png" class="icono-carpeta cierre"></a>
             </div>
             <div id="window-main-exercise">
-                <h3 id="header-exercise">Ejercicio 1 - Obtener elemento por clase y tag</h3>
+                <h3 id="header-exercise">Ejercicio 5 - Obtener elemento por clase y tag</h3>
                 <div id="content-exercise">
-                    <p>Uno de los elementos de la siguiente lista tiene un id</p>
-                    <ul>
-                        <li>Yo no tengo un id</li>
-                        <li>Yo tampoco tengo un id</li>
-                        <li id="hola">¡Hola! Yo si tengo un id</li>
+                    <p>En el siguiente ejercicio creamos y eliminaremos elementos del DOM de forma dinamica.</p>
+                    <ul id="lista">
+                        <li>Elemento inicial 1</li>
+                        <li>Elemento inicial 2</li>
                     </ul>
-                    <p>Pulsa el boton</p>
-                    <button id="boton" class="btn">Obten el elemento con el id="hola"</button>
-                    <div id="resultado">Aqui se mostrara el texto del elemento que tenga un id="hola"</div>
+                    <div class="botones">
+                        <button id="addElement" class="btn">Añadir elemento</button>
+                        <button id="removeElement" class="btn">Eliminar elemento</button>
+                    </div>
                 </div>
-                <div id="learn-exercise"><p>Cuando creemos un fichero JS deberemos indicar en la primera linea <code>"use strict"</code> para que al interpretarlo utilice la ultima version de JS. Actualmente trabajamos con ECMAscript6</p><br><p>Si inspeccionamos la pagina veremos que el ultimo de la lista tiene el id=hola y es justo su texto lo que recuperamos al pulsar el boton</p><br><p>Para obtener elementos con un id concreto utilizamos la funcion <code>getElementById ("nombre_del_id")</code> normalmente lo obtenedremos del documento. Por lo que la sintaxis quedara como <code>document.getElementById ("nombre_del_id")</code></p></div>
+                <div id="learn-exercise">
+                    <p>Para añadir un elemento al DOM primero creamos un elemento del tipo deseado con <code>createElement</code>. Una vez creado el elemento le podemos dar contenido con los metodos vistos en el ejercicio 4. Por ultimo este elemento sera hijo de algun otro elemento del DOM, bien del body, de un div, de un ul... asi que lo añadiremos como hijo con <code>appendChild</code></p><br>
+                    <p>Para eliminar el ultimo hijo de un elemento primero seleccionaremos ese hijo con <code>lastElementChild</code> y entonces lo eliminamos con <code>removeChild</code></p><br>
+                    <p><code>lastChild</code> no es lo mismo que <code>lastElementChild</code> con lastElementChild obtenemos objetos de tipo Element mientras que con lastChild podemos obtener tambien elementos de tipo Text como pueden ser espacios, saltos o tabulaciones. Por ejemplo en las listas la tabulacion que tienen es un elemento de tipo Text, por lo que es importante tener en cuentas estas casuisticas a la hora de manipular el DOM</p>
+                </div>
             </div>
         </div>
     <div id="detalle"></div>

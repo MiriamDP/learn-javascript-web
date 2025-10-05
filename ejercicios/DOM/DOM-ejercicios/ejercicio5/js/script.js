@@ -1,16 +1,23 @@
 "use strict";
 
-const idElement=document.getElementById("hola");
+const btnAdd=document.getElementById("addElement");
+const btnRemove=document.getElementById("removeElement");
 const resultado=document.getElementById("resultado");
+const lista=document.getElementById("lista");
 
-console.log(boton);
+btnAdd.addEventListener("click",()=>{
+    const nuevoElemento=document.createElement("li");
+    nuevoElemento.innerHTML=`Nuevo elemento ${lista.children.length+1}`;
+    lista.appendChild(nuevoElemento);
+    resultado.textContent=`Elemento ${lista.children.length} añadido correctamente`;
+});
 
-/*Ojo en las utlimas versiones de los elementos los objetos del DOM con un id pueden 
-aparecer directamente en la variable window por lo que se puede acceder a ellos
-sin necesidad de hacer un getElementById, pero esto es poco recomendable
-Se ha dejado aqui como caso curioso*/
-boton.onclick=mostrar; //esta es una forma de añadir un evento a un elemento, como se asigna la funcion no hay que ponerle los parentesis
-
-function mostrar(){
-    resultado.innerHTML=idElement.textContent;
-}
+btnRemove.addEventListener("click",()=>{
+    if(lista.children.length>0){
+        const ultimoElemento=lista.lastElementChild;
+        lista.removeChild(ultimoElemento);
+        resultado.textContent=`Elemento ${lista.children.lenght+1} eliminado correctamente`;
+    }else{
+        resultado.textContent=`No hay elementos que eliminar`;
+    }
+});
