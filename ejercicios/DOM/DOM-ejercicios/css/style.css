@@ -76,3 +76,7 @@ li::marker {
 .botones button {
     width: 50%;
 } */
+
+#content-exercise p,#learn-exercise p {
+    cursor: default;
+}

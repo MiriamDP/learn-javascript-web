@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../../../style.css" type="text/css">
     <link rel="stylesheet" href="../../../../style-window.css" type="text/css">
     <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,19 +44,25 @@
                 <a href="../../../../index.html"><img src="../../../../img/cierre.png" class="icono-carpeta cierre"></a>
             </div>
             <div id="window-main-exercise">
-                <h3 id="header-exercise">Ejercicio 1 - Obtener elemento por clase y tag</h3>
+                <h3 id="header-exercise">Ejercicio 6 - Activar y desactivar eventos con addEventListener y removeEventListener</h3>
                 <div id="content-exercise">
-                    <p>Uno de los elementos de la siguiente lista tiene un id</p>
-                    <ul>
-                        <li>Yo no tengo un id</li>
-                        <li>Yo tampoco tengo un id</li>
-                        <li id="hola">¡Hola! Yo si tengo un id</li>
-                    </ul>
-                    <p>Pulsa el boton</p>
-                    <button id="boton" class="btn">Obten el elemento con el id="hola"</button>
-                    <div id="resultado">Aqui se mostrara el texto del elemento que tenga un id="hola"</div>
+                    <p id="raven">Once upon a midnight dreary, while I pondered, weak and weary,
+Over many a quaint and curious volume of forgotten lore—
+    While I nodded, nearly napping, suddenly there came a tapping,
+As of some one gently rapping, rapping at my chamber door.
+“’Tis some visitor,” I muttered, “tapping at my chamber door—
+            Only this and nothing more.”</p>
+                    <cite>The Raven by Edgar Allan Poe</cite>
+                    <a id="ravenLink" href="https://www.poetryfoundation.org/poems/48860/the-raven">Para leerlo completo en inglés</a>
+                    <div class="botones">
+                        <button id="activeEvent" class="btn">Activar evento</button>
+                        <button id="removeEvent" class="btn">Desactivar evento</button>
+                    </div>
+                    <div id="resultado">Pulsa un boton para manipular los eventos. Al activarlo aparecera la traduccion del texto al pasar el raton por encima del mismo</div>
                 </div>
-                <div id="learn-exercise"><p>Cuando creemos un fichero JS deberemos indicar en la primera linea <code>"use strict"</code> para que al interpretarlo utilice la ultima version de JS. Actualmente trabajamos con ECMAscript6</p><br><p>Si inspeccionamos la pagina veremos que el ultimo de la lista tiene el id=hola y es justo su texto lo que recuperamos al pulsar el boton</p><br><p>Para obtener elementos con un id concreto utilizamos la funcion <code>getElementById ("nombre_del_id")</code> normalmente lo obtenedremos del documento. Por lo que la sintaxis quedara como <code>document.getElementById ("nombre_del_id")</code></p></div>
+                <div id="learn-exercise">
+                    
+                </div>
             </div>
         </div>
     <div id="detalle"></div>

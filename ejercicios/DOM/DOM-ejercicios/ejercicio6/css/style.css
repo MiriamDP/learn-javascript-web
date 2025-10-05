@@ -1,0 +1,12 @@
+#ravenLink{
+    color:  rgb(243, 128, 182);
+    text-decoration: none;
+}
+
+#ravenLink:hover{
+    color: rgb(163, 38, 96);
+}
+
+cite, #resultado{
+    cursor: default;
+}
