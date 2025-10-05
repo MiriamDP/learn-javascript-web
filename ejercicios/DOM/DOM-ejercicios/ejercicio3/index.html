@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../../../style.css" type="text/css">
     <link rel="stylesheet" href="../../../../style-window.css" type="text/css">
     <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +32,7 @@
     </header>
     <nav>
         <div class="icono-escritorio carpeta-nav"><a href="../../../../referencias/index.html"><img src="../../../../img/carpetaCerrada.png"><p>Referencias</p></a></div>
-        <div class="icono-escritorio carpeta-nav"><a href="../../../../referencias/index.html"><img src="../../../../img/carpetaabierta2.png"><p>Ejercicios</p></a></div>
+        <div class="icono-escritorio carpeta-nav"><a href="../../../../ejercicios/index.html"><img src="../../../../img/carpetaabierta2.png"><p>Ejercicios</p></a></div>
         <div class="icono-escritorio registro-nav"><a href="../../../../referencias/index.html"><img src="../../../../img/registro.png"><p>Registro</p></a></div>
         <div class="icono-escritorio login-nav"><a href="../../../../referencias/index.html"><img src="../../../../img/login.png"><p>LogIn</p></a></div>
     </nav>
@@ -43,19 +44,24 @@
                 <a href="../../../../index.html"><img src="../../../../img/cierre.png" class="icono-carpeta cierre"></a>
             </div>
             <div id="window-main-exercise">
-                <h3 id="header-exercise">Ejercicio 1 - Obtener elemento por clase y tag</h3>
+                <h3 id="header-exercise">Ejercicio 3 - querrySelecto y querrySelectorAll</h3>
                 <div id="content-exercise">
-                    <p>Uno de los elementos de la siguiente lista tiene un id</p>
-                    <ul>
-                        <li>Yo no tengo un id</li>
-                        <li>Yo tampoco tengo un id</li>
-                        <li id="hola">¡Hola! Yo si tengo un id</li>
-                    </ul>
-                    <p>Pulsa el boton</p>
-                    <button id="boton" class="btn">Obten el elemento con el id="hola"</button>
-                    <div id="resultado">Aqui se mostrara el texto del elemento que tenga un id="hola"</div>
+                    <p class=color>Roses are red</p>
+                    <p>violets are blue</p>
+                    <p class="color">my dog is my favorite</p>
+                    <p>but you're OK too</p>
+                    <cite>Valentine's Day Card. Unknown</cite>
+                    <div class="botones">
+                        <button id="botonSelector" class="btn">querrySelector(".color")</button>
+                        <button id="botonSelectorAll" class="btn">querrySelectorAll(".color")</button>
+                    </div>
+                    <div id="resultado">Aqui se mostraran los resultado de pulsar cada boton</div>
                 </div>
-                <div id="learn-exercise"><p>Cuando creemos un fichero JS deberemos indicar en la primera linea <code>"use strict"</code> para que al interpretarlo utilice la ultima version de JS. Actualmente trabajamos con ECMAscript6</p><br><p>Si inspeccionamos la pagina veremos que el ultimo de la lista tiene el id=hola y es justo su texto lo que recuperamos al pulsar el boton</p><br><p>Para obtener elementos con un id concreto utilizamos la funcion <code>getElementById ("nombre_del_id")</code> normalmente lo obtenedremos del documento. Por lo que la sintaxis quedara como <code>document.getElementById ("nombre_del_id")</code></p></div>
+                <div id="learn-exercise"><p>Con <code>querrySelector</code> podemos seleccionar el primer elemento que tenga una cierta clase o etiqueta del DOM. Al pulsar el boton vemos que solo recuperamos el texto del primer elemento con la clase color</p><br>
+                    <p>Si en su lugar usamos <code>querrySelectorAlll</code> seleccionamos todos los elementos del DOM con la clase o etiqueta elegida</p><br>
+                    <p>Es importante tener en cuenta que al seleccionar clases o ids con cualquiera de estos metodos hay que especificarlos como en CSS</p><br>
+                    <p>El objeto devuelto en el caso de querrySelectorAll es de tipo NodeList es por este motivo que al trabajar con este tipo de elementos podemos iterar sobre ellos con un bucle foreach. Podemos comprobar el tipo de elemento abriendo la consola del inspector</p>
+                </div>
             </div>
         </div>
     <div id="detalle"></div>

@@ -32,7 +32,7 @@
     </header>
     <nav>
         <div class="icono-escritorio carpeta-nav"><a href="../../../../referencias/index.html"><img src="../../../../img/carpetaCerrada.png"><p>Referencias</p></a></div>
-        <div class="icono-escritorio carpeta-nav"><a href="../../../../referencias/index.html"><img src="../../../../img/carpetaabierta2.png"><p>Ejercicios</p></a></div>
+        <div class="icono-escritorio carpeta-nav"><a href="../../../../ejercicios/index.html"><img src="../../../../img/carpetaabierta2.png"><p>Ejercicios</p></a></div>
         <div class="icono-escritorio registro-nav"><a href="../../../../referencias/index.html"><img src="../../../../img/registro.png"><p>Registro</p></a></div>
         <div class="icono-escritorio login-nav"><a href="../../../../referencias/index.html"><img src="../../../../img/login.png"><p>LogIn</p></a></div>
     </nav>
@@ -65,7 +65,9 @@
                 <div id="learn-exercise">
                     <p>Cuando seleccionamos elementos del DOM con <code>getElementByClassName</code> seleccionamos todos los elementos que tengan la clase, esten o no visibles en la pagina en ese momento. Puedes ver esto si abres el inspector del navegador tras pulsar el boton. Como puedes ver se muestra que hay tres elementos con la clase color</p>
                     <br><p>Con la funcion <code>getElementByTagName</code> seleccionamos todos los elementos del DOM que tengan la clase especificada</p><br>
-                    <p>Al pulsar vemos que no solo ha resaltado todos los parrafos del texto sino todos los parrafos que esten en el DOM en ese momento, por lo que ha afectado tambien a los nombres de las carpetas y a este mismo texto entre otros. Al igual que con las clases tambien selecciona a los elementos no visibles, puedes comprobarlo entrando en la consola del inspector del navegador. Veras que aparece un parrafo con la clase oculta p.oculta</p></div>
+                    <p>Al pulsar vemos que no solo ha resaltado todos los parrafos del texto sino todos los parrafos que esten en el DOM en ese momento, por lo que ha afectado tambien a los nombres de las carpetas y a este mismo texto entre otros. Al igual que con las clases tambien selecciona a los elementos no visibles, puedes comprobarlo entrando en la consola del inspector del navegador. Veras que aparece un parrafo con la clase oculta p.oculta</p><br>
+                    <p>En ambos casos el objeto devuelto es de tipo HTMLCollection y este tipo de objeto es no iterable por lo que no se puede emplear bucles foreach con ellos</p>
+                </div>
             </div>
         </div>
     <div id="detalle"></div>

@@ -1,16 +1,21 @@
 "use strict";
 
-const idElement=document.getElementById("hola");
+const btnSelector=document.getElementById("botonSelector");
+const btnAll=document.getElementById("botonSelectorAll");
 const resultado=document.getElementById("resultado");
 
-console.log(boton);
+btnSelector.addEventListener("click",()=>{
+    const primerParrafo=document.querySelector(".color");
+    resultado.innerHTML=`<p>El primer elemento con la clase color es: </p><p>${primerParrafo.textContent}</p>`;
+});
 
-/*Ojo en las utlimas versiones de los elementos los objetos del DOM con un id pueden 
-aparecer directamente en la variable window por lo que se puede acceder a ellos
-sin necesidad de hacer un getElementById, pero esto es poco recomendable
-Se ha dejado aqui como caso curioso*/
-boton.onclick=mostrar; //esta es una forma de añadir un evento a un elemento, como se asigna la funcion no hay que ponerle los parentesis
-
-function mostrar(){
-    resultado.innerHTML=idElement.textContent;
-}
+btnAll.addEventListener("click",()=>{
+    const parrafosColor=document.querySelectorAll(".color");
+    console.log(parrafosColor);
+    let salida='<p>Los elementos con la clase color encontrados son: </p><ul>';
+    parrafosColor.forEach((p)=>{
+        salida+=`<li>${p.textContent}</li>`;
+    });
+    salida+=`</ul>`;
+    resultado.innerHTML=salida;
+});
