@@ -5,16 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprende javascript</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="./00-css/style.css" type="text/css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
-        <script defer src="./js/bienvenida.js"></script>
-        <script defer src="./js/script.js"></script>
-
+    <script defer src="./00-js/bienvenida.js"></script>
+    <script defer src="./00-js/hora.js"></script>
 </head>
 
 <body>
@@ -28,16 +27,15 @@
         <div id="date-time"></div>
     </header>
     <nav>
-        <div class="icono-escritorio carpeta-nav"><a href="./referencias/index.html"><img src="./img/carpetaCerrada.png"><p>Referencias</p></a></div>
-        <div class="icono-escritorio carpeta-nav"><a href="./ejercicios/index.html"><img src="./img/carpetaCerrada.png"><p>Ejercicios</p></a></div>
-        <div class="icono-escritorio registro-nav"><a href="./registro/index.html"><img src="./img/registro.png"><p>Registro</p></a></div>
-        <div class="icono-escritorio login-nav"><a href="./logIn-logOut/index.html"><img src="./img/login.png"><p>LogIn</p></a></div>
+        <div class="icono-escritorio carpeta-nav publico"><a href="./referencias/index.html"><img src="./img/carpetaCerrada.png"><p>Referencias</p></a></div>
+        <div class="icono-escritorio carpeta-nav privado"><a href="./ejercicios/index.html"><img src="./img/carpetaCerrada.png"><p>Ejercicios</p></a></div>
+        <div class="icono-escritorio registro-nav publico"><a href="./registro/index.html"><img src="./img/registro.png"><p>Registro</p></a></div>
+        <div class="icono-escritorio login-nav publico"><a href="./logIn-logOut/index.html"><img src="./img/login.png"><p>LogIn</p></a></div>
+
+        <div class="icono-escritorio user-nav privado"><a href="./logIn-logOut/index.html"><img src="./img/login.png"><p>LogIn</p></a></div>
+        <div class="icono-escritorio logout-nav privado"><a href="./logIn-logOut/index.html"><img src="./img/logout.png"><p>LogIn</p></a></div>
     </nav>
     <main>
-        <!-- <div id="window">
-            <div id="window-header">/fun/home</div>
-        </div> -->
-
         <!--Mensaje de bienvenida-->
         <div id="welcome">
             <div id="welcome-header">Bienvenid@</div>
@@ -46,7 +44,7 @@
                 <p>Explora las referencias destacadas del lenguaje o create un usuario para comenzar a navegar por los ejercicios practicos</p><br>
                 <p>El conocimiento nunca estuvo tan cerca.</p><br>
             </div>
-            <button id="btn-welcome">Entendido</button>
+            <button id="">Entendido</button>
         </div>
         
     </main>

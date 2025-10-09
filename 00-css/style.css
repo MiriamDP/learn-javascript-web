@@ -47,6 +47,7 @@ main {
 }
 
 
+/*Mensaje de bienvenida*/
 #welcome {
     width: 450px;
     background-color: white;
@@ -76,7 +77,7 @@ main {
     
 }
 
-#btn-welcome{
+#welcome-btn{
     font-weight: bold;
     color: white;
     background-color: rgb(243, 128, 182);
@@ -91,7 +92,7 @@ main {
     height: 100%;
 }
 
-#btn-welcome:hover {
+#welcome-btn:hover {
     background-color: rgb(241, 81, 156);
 }
 
@@ -185,4 +186,12 @@ nav a{
 
 .web-icon:hover img {
     content: url(./img/web1.png);
+}
+
+.publico{
+    display: block;
+}
+
+.privado{
+    display: none;
 }
