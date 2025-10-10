@@ -34,11 +34,11 @@
 }
 
 .cierre:hover {
-    content: url(./img/cierre2.png);
+    content: url(../img/cierre2.png);
 }
 
 .atras:hover {
-    content: url(./img/flechaHover.png);
+    content: url(../img/flechaHover.png);
 }
 
 #window-main{
@@ -63,7 +63,7 @@
 }
 
 .icono-submenu:hover img{
-    content: url(./img/carpetaabierta3.png);
+    content: url(../img/carpetaabierta3.png);
 }
 
 .icono-submenu:hover p, .web-icon:hover p, .icono-fichero:hover p{
@@ -104,9 +104,9 @@
 
 
 .web-icon:hover img {
-    content: url(./img/web1.png);
+    content: url(../img/web1.png);
 }
 
 .icono-fichero:hover img {
-    content: url(./img/fichero2.png);
+    content: url(../img/fichero2.png);
 }

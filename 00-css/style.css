@@ -5,7 +5,7 @@
 }
 
 html {
-    background-image: url("./img/Fondo.jpg");
+    background-image: url("../img/Fondo.jpg");
 }
 
 header{
@@ -159,7 +159,6 @@ nav a{
 
 .icono-escritorio:hover p{
     color: rgb(241, 81, 156);
-
 }
 
 .icono-escritorio p {
@@ -173,19 +172,19 @@ nav a{
 
 
 .carpeta-nav:hover img{
-    content: url(./img/carpetaabierta3.png);
+    content: url(../img/carpetaabierta3.png);
 }
 
 .login-nav:hover img{
-    content: url(./img/logout.png);
+    content: url(../img/logout.png);
 }
 
 .registro-nav:hover img{
-    content: url(./img/registro2.png);
+    content: url(../img/registro2.png);
 }
 
 .web-icon:hover img {
-    content: url(./img/web1.png);
+    content: url(../img/web1.png);
 }
 
 .publico{
@@ -193,5 +192,5 @@ nav a{
 }
 
 .privado{
-    display: none;
+    display: block;
 }

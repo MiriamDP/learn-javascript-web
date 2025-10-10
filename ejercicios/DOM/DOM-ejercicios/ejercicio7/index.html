@@ -7,7 +7,7 @@
     <title>Aprende javascript</title>
     <link rel="stylesheet" href="../../../../00-css/style.css" type="text/css">
     <link rel="stylesheet" href="../../../../00-css/style-window.css" type="text/css">
-    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <link rel="stylesheet" href="../../../css/style.css" type="text/css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,23 +42,43 @@
         <div id="window">
             <div id="window-header">
                 <a href="../../index.html"><img src="../../../../img/flechaatras.png" class="icono-carpeta atras"></a>
-                <p>home/ejercicios/DOM/Ejercicio-1</p>
+                <p>home/ejercicios/DOM/Ejercicio-7</p>
                 <a href="../../../../index.html"><img src="../../../../img/cierre.png" class="icono-carpeta cierre"></a>
             </div>
             <div id="window-main-exercise">
-                <h3 id="header-exercise">Ejercicio 7 - La familia del DOM</h3>
+                <h3 id="header-exercise">Ejercicio 7 - La familia del DOM. Padres e hijos</h3>
                 <div id="content-exercise">
-                    <p>Uno de los elementos de la siguiente lista tiene un id</p>
-                    <ul>
-                        <li>Yo no tengo un id</li>
-                        <li>Yo tampoco tengo un id</li>
-                        <li id="hola">¡Hola! Yo si tengo un id</li>
+                    <p>La siguiente lista tendra un padre y este tendrá unos hijos</p>
+                    <ul id="padreLista">
+                        <li>Yo soy el primer hijo de la lista</li>
+                        <li id="actualLista">Yo soy un hijo intermedio de la lista</li>
+                        <li>Yo soy el ultimo hijo de la lista</li>
                     </ul>
-                    <p>Pulsa el boton</p>
-                    <button id="boton" class="btn">Obten el elemento con el id="hola"</button>
-                    <div id="resultado">Aqui se mostrara el texto del elemento que tenga un id="hola"</div>
+                    <p>Debajo de este parrafo hay cuatro parrafos contenidos dentro del mismo "div"</p>
+                    <div id="padreParrafos">
+                        <p>Yo soy el primer hijo del div</p>
+                        <p id="actualDiv">Yo soy uno de los hijos intermedios del div</p>
+                        <p>Yo tambien soy uno de los hijos intermedios del div</p>
+                        <!--Yo un comentario pero soy un hijo de este div-->
+                        <p>Yo soy el ultimo hijo del div</p>
+                    </div>
+                    <div class="botones">
+                        <button id="padre" class="btn">Ver padre</button>
+                        <button id="nodoHijos" class="btn">Nodo hijos</button>
+                        <button id="primerHijo" class="btn">Primer hijo</button>
+                        <button id="ultimoHijo" class="btn">Ultimo hijo</button>
+                    </div>
+                    <div id="resultado">Aqui se mostrara el resultado de pulsar los botones</div>
                 </div>
-                <div id="learn-exercise"><p>Cuando creemos un fichero JS deberemos indicar en la primera linea <code>"use strict"</code> para que al interpretarlo utilice la ultima version de JS. Actualmente trabajamos con ECMAscript6</p><br><p>Si inspeccionamos la pagina veremos que el ultimo de la lista tiene el id=hola y es justo su texto lo que recuperamos al pulsar el boton</p><br><p>Para obtener elementos con un id concreto utilizamos la funcion <code>getElementById ("nombre_del_id")</code> normalmente lo obtenedremos del documento. Por lo que la sintaxis quedara como <code>document.getElementById ("nombre_del_id")</code></p></div>
+                <div id="learn-exercise">
+                    <p>Para movernos por el arbol DOM y trabajar con sus elementos hay distintas funciones que podemos usar</p><br>
+                    <p>Todo elemento que este en el DOM tiene un elemento padre que lo contiene hasta llegar al elemento html que es padre de padres.</p><br>
+                    <p>Cada elemento del DOM es un nodo y hay tres tipos de nodos: elemento, texto y comentarios. Sabiendo esto las propiedades suelen dividirse en aquellas que contienen la palabra Element y las que no, la diferencia radica en si capturan nodos de tipo elemento o de cualquier tipo</p><br>
+                    <p>Para acceder al padre de un elemento podemos hacerlo con <code>parentNode</code> y con <code>parentElement</code> la diferencia esta principalmente en el tipo de objeto que devuelven y en el caso de no encontrar al padre. En la consola podemos ver que devuelven todo el html que contienen en ambos casos</p><br>
+                    <p>Para acceder a los hijos de un elemento usaremos <code>childNodes</code> que nos devolvera un objeto de tipo <i>NodeList</i> con los hijos, este elemento sera iterable</i>. Tambien podremos usar <code>children</code> solo que en este caso solo capturara elementos y devolvera un <i>HTMLCollection</i>. El primero se suele usar mas para manipualcion de los elementos mientas que el segundo para navegar por ellos. En la consola podemos ver la diferencia de tipos. Tambien podemos ver la diferencia en el resultado ya que muestra las tabulaciones que incluye la lista al haber sido capturada con childNodes</p><br>
+                    <p>Para acceder al primer hijo podemos usar <code>firstChild</code> o <code>firstElementChild</code>. Es muy importante tener en cuenta las indexaciones de codigo ya que este tambien añade, al usar esta propiedad, espacios vacios. Por eso aparece como undefined el contenido de los nodos capturados con el primer modo </p><br>
+                    <p>Para acceder al ultimo hijo podemos usar <code>lastChild</code> o <code>lastElementChild</code>. Funciona igual que firstChild y firstElementChild</p><br>
+                </div>
             </div>
         </div>
     <div id="detalle"></div>

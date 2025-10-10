@@ -8,16 +8,15 @@
     <link rel="stylesheet" href="../../../../00-css/style.css" type="text/css">
     <link rel="stylesheet" href="../../../../00-css/style-window.css" type="text/css">
     <link rel="stylesheet" href="../../../css/style.css" type="text/css">
-    <link rel="stylesheet" href="./css/style.css" type="text/css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
-        <script defer src="../../../../00-js/script.js"></script>
-        <script defer src="./js/script.js"></script>
 
+    <script defer src="../../../../00-js/hora.js"></script>
+    <script defer src="./js/script.js"></script>
 </head>
 
 <body>
@@ -39,32 +38,41 @@
                 <div class="icono-escritorio user-nav privado"><a href="./logIn-logOut/index.html"><img src="../../../../img/login.png"><p>LogIn</p></a></div>
         <div class="icono-escritorio logout-nav privado"><a href="./logIn-logOut/index.html"><img src="../../../../img/logout.png"><p>LogIn</p></a></div>
     </nav>
-    <main> <!--Aqui podria ir con el #ejericio-index-->
+    <main>
         <div id="window">
             <div id="window-header">
                 <a href="../../index.html"><img src="../../../../img/flechaatras.png" class="icono-carpeta atras"></a>
-                <p>home/ejercicios/DOM/Ejercicio-6</p>
+                <p>home/ejercicios/DOM/Ejercicio-8</p>
                 <a href="../../../../index.html"><img src="../../../../img/cierre.png" class="icono-carpeta cierre"></a>
             </div>
             <div id="window-main-exercise">
-                <h3 id="header-exercise">Ejercicio 6 - Activar y desactivar eventos con addEventListener y removeEventListener</h3>
+                <h3 id="header-exercise">Ejercicio 8 - La familia del DOM. Hermanos</h3>
                 <div id="content-exercise">
-                    <p id="raven">Once upon a midnight dreary, while I pondered, weak and weary,
-Over many a quaint and curious volume of forgotten lore—
-    While I nodded, nearly napping, suddenly there came a tapping,
-As of some one gently rapping, rapping at my chamber door.
-“’Tis some visitor,” I muttered, “tapping at my chamber door—
-            Only this and nothing more.”</p>
-                    <cite>The Raven by Edgar Allan Poe</cite>
-                    <a id="ravenLink" href="https://www.poetryfoundation.org/poems/48860/the-raven">Para leerlo completo en inglés</a>
-                    <div class="botones">
-                        <button id="activeEvent" class="btn">Activar evento</button>
-                        <button id="removeEvent" class="btn">Desactivar evento</button>
+                    <p>La siguiente lista tendra un padre y este tendrá unos hijos</p>
+                    <ul id="padreLista">
+                        <li>Yo soy el primer hijo de la lista</li>
+                        <li id="actualLista">Yo soy un hijo intermedio de la lista. ¿Quienes son mis hermanos contiguos?</li>
+                        <li>Yo soy el ultimo hijo de la lista</li>
+                    </ul>
+                    <p>Debajo de este parrafo hay cuatro parrafos contenidos dentro del mismo "div"</p>
+                    <div id="padreParrafos">
+                        <p>Yo soy el primer hijo del div</p>
+                        <p id="actualDiv">Yo soy uno de los hijos intermedios del div. ¿Quienes son mis hermanos contiguos?</p>
+                        <p>Yo tambien soy uno de los hijos intermedios del div</p>
+                        <!--Yo un comentario pero soy un hijo de este div-->
+                        <p>Yo soy el ultimo hijo del div</p>
                     </div>
-                    <div id="resultado">Pulsa un boton para manipular los eventos. Al activarlo aparecera la traduccion del texto al pasar el raton por encima del mismo</div>
+                    <div class="botones">
+                        <button id="anterior" class="btn">Hermano anterior</button>
+                        <button id="siguiente" class="btn">Hermano siguiente</button>
+                    </div>
+                    <div id="resultado">Aqui se mostrara el resultado de pulsar los botones</div>
                 </div>
                 <div id="learn-exercise">
-                    
+                    <p>Para movernos por el arbol DOM y trabajar con sus elementos hay distintas funciones que podemos usar</p><br>
+                    <p>Cada elemento del DOM es un nodo y hay tres tipos de nodos: elemento, texto y comentarios. Sabiendo esto las propiedades suelen dividirse en aquellas que contienen la palabra Element y las que no, la diferencia radica en si capturan nodos de tipo elemento o de cualquier tipo</p><br>
+                    <p>Para acceder al hermano anterior de un elemento dentro del arbol DOM podemos hacerlo con <code>previousSibling</code> y con <code>previousElementSibling</code> La diferencia esta en el tipo de nodo que capturan. Ya que como sabemos Element solo capturara de tipo elemento html. Ademas tienen un funcionamiento igual al de firstChild y firstElementChild</p><br>
+                    <p>Para acceder al hermano siguiente de un elemento dentro del arbol DOM podemos hacerlo con <code>nextSibling</code> y con <code>nextElementSibling</code> Y funciona de forma similar al anterior</p><br>
                 </div>
             </div>
         </div>

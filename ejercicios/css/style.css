@@ -26,6 +26,9 @@
 #content-exercise {
     grid-area: content-exercise;
     padding: 10px;
+    overflow-y: scroll;
+    scrollbar-width: auto;
+    scrollbar-color: rgb(243, 128, 182) #f1f1f1;
 }
 
 #learn-exercise {
