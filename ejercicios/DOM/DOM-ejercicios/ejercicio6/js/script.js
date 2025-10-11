@@ -7,11 +7,11 @@ const raven=document.getElementById("raven");
 const ravenLink=document.getElementById("ravenLink");
 
 btnActive.addEventListener("click",()=>{
-    raven.addEventListener("mouseover",traducir);
+    raven.addEventListener("mouseover",traducirSpanish);
     resultado.textContent="Pasa el raton por encima del texto para traducir";
 });
 
-function traducir(){
+function traducirSpanish(){
     raven.innerHTML=`Una vez, al filo de una lúgubre media noche,
 mientras débil y cansado, en tristes reflexiones embebido,
 inclinado sobre un viejo y raro libro de olvidada ciencia,

@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     console.log("he cargado");
     const cookies=document.cookie.split("; ");
     console.log(cookies);
-    let welcome;
+    let welcome=false;
     cookies.forEach(cookie => {
         const [clave, valor]=cookie.split("=");
         console.log("clave= ");
@@ -23,4 +23,10 @@ document.addEventListener("DOMContentLoaded",()=>{
         console.log("estoy aqui")
         document.getElementById("welcome").style.display="";
     }
+});
+
+const btnWelcome=document.getElementById("welcome-btn");
+btnWelcome.addEventListener("click",()=>{
+    document.cookie=`bienvenido=true; path=/`;
+    location.reload();
 });

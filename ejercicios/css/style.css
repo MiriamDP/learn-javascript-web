@@ -74,6 +74,12 @@ li::marker {
 
 .botones {
     display: flex;
+    flex-wrap: wrap;
+}
+
+.botones button {
+    width: 25%;
+    height: 60px;
 }
 /* 
 .botones button {
