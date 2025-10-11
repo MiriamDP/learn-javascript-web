@@ -77,15 +77,6 @@ li::marker {
     flex-wrap: wrap;
 }
 
-.botones button {
-    width: 25%;
-    height: 60px;
-}
-/* 
-.botones button {
-    width: 50%;
-} */
-
 #content-exercise p,#learn-exercise p {
     cursor: default;
 }

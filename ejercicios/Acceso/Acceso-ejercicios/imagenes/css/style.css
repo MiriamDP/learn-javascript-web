@@ -1,0 +1,7 @@
+input[type="file"]{
+    background-color: rgb(245, 180, 210);
+    height: 30px;
+    align-content: center;
+    margin: 1%;
+    border-radius: 5px;
+}

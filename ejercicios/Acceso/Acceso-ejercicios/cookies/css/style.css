@@ -20,3 +20,8 @@ input:focus {
     /* background-color: rgb(245, 180, 210); */
     outline: none;
 }
+
+.botones button {
+    width: 25%;
+    height: 60px;
+}
