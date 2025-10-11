@@ -1,0 +1,27 @@
+label, input {
+    margin-bottom: 1%;
+}
+
+input {
+    border-color: rgb(243, 128, 182);
+    border-radius: 10px;
+    border-style: solid;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+input:focus {
+    border-color: rgb(163, 38, 96);
+    /* background-color: rgb(245, 180, 210); */
+    outline: none;
+}
+
+.botones button {
+    width: 25%;
+    height: 60px;
+}

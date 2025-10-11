@@ -20,7 +20,7 @@
         rel="stylesheet">
         <script defer src="../../../../00-js/hora.js"></script>
         <script defer src="./js/script.js"></script>
-        <script defer src="./js/cookies.js"></script>
+        <script defer src="./js/localStorage.js"></script>
 
 </head>
 
@@ -48,13 +48,17 @@
         <div id="window">
             <div id="window-header">
                 <a href="../../index.html"><img src="../../../../img/flechaatras.png" class="icono-carpeta atras"></a>
-                <p>home/ejercicios/Acceso/Cookies</p>
+                <p>home/ejercicios/Acceso/LocalStorage</p>
                 <a href="../../../../index.html"><img src="../../../../img/cierre.png" class="icono-carpeta cierre"></a>
             </div>
             <div id="window-main-exercise">
-                <h3 id="header-exercise">Ejercicio - Trabajando con las cookies</h3>
+                <h3 id="header-exercise">Ejercicio - Guardando en localStorage</h3>
                 <div id="content-exercise">
                     <form>
+                        <div>
+                            <label>Nombre y apellidos</label>
+                            <input type="text" name="nombre" id="nombre"><br>
+                        </div>
                         <div>
                             <label>Nombre de usuario</label>
                             <input type="text" name="usuario" id="usuario"><br>
@@ -65,24 +69,25 @@
                         </div>
                     </form>
                     <div class="botones">
-                        <button id="guardarSin" class="btn">Guardar una cookie sin caducidad</button>
-                        <button id="guardarMax" class="btn">Guardar una cookie con max-age=10</button>
-                        <button id="guardarFecha" class="btn">Guardar una cookie con expire</button>
-                        <button id="leerUna" class="btn">Leer una cookie</button>
-                        <button id="leerTodas" class="btn">Leer todas cookie</button>
-                        <button id="borrar" class="btn">Borrar una cookie</button>
+                        <button id="guardar" class="btn">Guardar usuario</button>
+                        <button id="leerUno" class="btn">Leer usuario</button>
+                        <button id="leerTodos" class="btn">Leer usuarios</button>
+                        <button id="borrar" class="btn">Borrar usuario</button>
                     </div>
                     <div id="resultado"></div>
                 </div>
                 <div id="learn-exercise">
-                    <p>El primer modo que tenemos para guardar informacion en el navegador son las cookies. Y aunque estas suelen ser más molestas que las de chocolate también tienen su utilidad</p><br>
-                    <p>Las cookies no son mas que una tupla clave-valor. En una cookie almacenamos texto plano. En principio podemos almacenar cualquier clave que queramos aunque hay algunas reservadas con funcionalidad como por ejemplo <code>expire</code>, <code>max-age</code> o <code>path</code></p><br>
-                    <p>Dentro de una cookie podemos tener mas de una tupla. Para separarlas entre si usaremos <b>;</b></p><br>
-                    <p>Normalmente las cookies suelen tener una caducidad, que es el tiempo durante el cual la cookie esta activa. Podemos especificar este tiempo con <code>expire</code> o con <code>max-age</code>. Con el primero especificamos en que fecha queremos que caduque y con el segundo cuanto tiempo pasara desde que se crea hasta que se caduque en segundos. Si no especificamos un max-age o un expire al crearla estaremos creando una cookie de sesion(sin caducidad) que estara activa hasta que cerremos el navegador o la destruyamos</p><br>
-                    <p>Ademas es importante indicar el <code>path</code> que no es mas que el lugar donde se guarda la cookie. Por defecto el path es <code>/</code></p><br>
-                    <p>Para poder acceder a las cookies y manipularlas o borrarlas usaremos <code>document.cookie</code>. Cada cookie que se crea se almacena aqui. Las cookie caducadas no se borraran del fichero, pero si se borran manualmente si desapareceran al recargar la pagina</p><br>
-                    <p>Para eliminar una cookie basta con hacer volver a crear la cookie con <code>max-age=0</code> al actualizar la cookie</p><br>
-                    <p>Tambien hay que tener en cuenta que para trabajar con cookies no todos los navegadores son tan permisivos. Para comprobar esta ejercicio te recomendamos que uses Firefox en lugar de Chrome</p>
+                    <p>Podemos guardar de dos formas en localStorage. Imaginemos que tenenos una tabla con los usuarios de nuestra aplicacion. Los datos de esta tabla podriamos almacenarlos por filas o podriamos guardar la tabla completa. En este primer caso guardaremos cada fila de la tabla como una entrada en el localStorage</p><br>
+                    <p>Para guardar un elemento <code>localStorage.addItem
+                        (clave, valores)</code>. Valores sera un objeto JSON por lo que habra que convertirlo a string para poder almacenarlo mediante <code>JSON.stringify(valores)</code> .Podemos ver en las herramientas de desarrollador en la pestaña Aplicacion que se ha creado una entrada en el localStorage con el usuario añadido. En key estara el nombre de usuario y en value los valores de ese</p><br>
+                    <p>localStorage es un array escalar. Podremos recorrelo de diversas formas. <b>Forma 1</b>con un bucle for. Donde cada entrada sera un array [key, value], para acceder a las keys usaremos <code>localStorage.key()</code> y para los valores tendremos que acceder al item con la key dada y pasarlo a formato JSON de esa forma podremos acceder a propiedades concretas del objeto</p><br>
+                    <p><b>Forma 2</b> Con un bucle for of de las claves. Haciendo un <code>Objects.keys (localStorage)</code> que nos devovlera un array con todas las claves y que recorreremos con el bucle for of</p><br>
+                    <p><b>Forma 3</b> Con un bucle forearch al transformar el localStorage en un array de arrays <code>Objecs.entries
+                        (localStorage).foreach()</code></p><br>
+                    <p><b>Forma 4</b> Con un bucle for of y Object.entries. Y <b>forma 5</b> con un bucle for in del propio localStorage aunque no es recomendable</p><br>
+                    <p>Para eliminar un elemento bastara con usar el metodo <code>removeItem(clave)</code></p><br>
+                    <p>Esta forma de guardar en el localStorage es bastante inconveniente en especial si tenemos muchos datos o esos datos proceden de tablas distintas, en ese caso tendriamos informacion mezclada</p><br>
+                    <p>Tambien al igual que ocurria con cookies no todos los navegadores permiten acceder al localStorage. En este caso se recomienda trabajar con Chrome en lugar de con Firefox</p>
                 </div>
             </div>
         </div>
