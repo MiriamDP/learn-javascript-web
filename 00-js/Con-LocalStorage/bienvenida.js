@@ -1,23 +1,17 @@
+//el mensaje de bienvenida solo se mostrara la primera vez que se entre en la sesion. Por ello se ha decido usar sessionStorage
 document.addEventListener("DOMContentLoaded",()=>{
-    console.log("he cargado");
-    const cookies=document.cookie.split("; ");
-    console.log(cookies);
+
+    console.log(sessionStorage.getItem("bienvenido"));
     let welcome=false;
-    cookies.forEach(cookie => {
-        const [clave, valor]=cookie.split("=");
-        console.log("clave= ");
-        console.log(clave)
-        console.log("valor= ");
-        console.log(valor)
-        if (clave=="bienvenido" && valor=="true"){
-            console.log("Soy bienvenido")
+    const claves=Object.keys(sessionStorage);
+    for (const clave of claves){
+        if (clave=="bienvenido"){
             welcome=true;
+            break;
         }
-    });
+    }
 
-    console.log(welcome);
-
-    if(welcome===true){
+    if(welcome){
         document.getElementById("welcome").style.display="none";
     }else {
         console.log("estoy aqui")
@@ -26,7 +20,8 @@ document.addEventListener("DOMContentLoaded",()=>{
 });
 
 const btnWelcome=document.getElementById("welcome-btn");
+
 btnWelcome.addEventListener("click",()=>{
-    document.cookie=`bienvenido=true; path=/`;
+    sessionStorage.setItem("bienvenido",JSON.stringify(true)); //establecemos una sesion de bienvenida
     location.reload();
 });

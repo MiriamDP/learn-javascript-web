@@ -1,0 +1,47 @@
+form{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+}
+
+label, input {
+    margin: 5px 0px;
+    width: 100%;
+    height: 50px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+}
+
+input{
+    border-color: rgb(243, 128, 182);
+    border-radius: 10px;
+    border-style: solid;
+}
+
+input:focus {
+    border-color: rgb(163, 38, 96);
+    /* background-color: rgb(245, 180, 210); */
+    outline: none;
+}
+
+.btn {
+    font-weight: bold;
+    color: white;
+    background-color: rgb(243, 128, 182);
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    cursor: pointer;
+    margin-left: 75%;
+    margin-top: 2.5%;
+    /* margin: 20px; */
+
+}
+
+.btn:hover{
+    background-color: rgb(241, 81, 156);
+}

@@ -18,7 +18,6 @@
     background-color: rgb(243, 128, 182);
     display: grid;
     grid-template-columns: 5% 90% 5%;
-
 }
 
 #window-header p{
@@ -109,4 +108,56 @@
 
 .icono-fichero:hover img {
     content: url(../img/fichero2.png);
+}
+
+/*window-registro*/
+#window-registro{
+    height: 600px;
+    width: 450px;
+    background-color: white;
+    margin-top: 15px;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgb(226, 164, 193); /*del color del tema o en gris?*/
+    display: grid;
+    grid-template-rows: 7% 93%;
+    grid-template-areas: "window-header" "window-main";
+    z-index: 10;
+    /*Para que quede por encima del nav*/
+    position: absolute;
+    top: 100px;
+}
+/*window-app*/
+#window-header-app{
+    border-bottom: 3px solid black;
+    padding: 5px 0;
+    text-align: center;
+    background-color: rgb(243, 128, 182);
+    display: grid;
+    grid-template-columns:90% 10%;
+}
+
+#window-header-app p{
+    font-weight: bold;
+    color: white;
+    cursor: default;
+}
+
+#window-main-app{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5%;
+    align-items: flex-start; /*Controla el tamaño de los item*/
+    align-content: flex-start; /*Controla la distancia entre filas*/
+    overflow-y: auto;
+}
+
+#window-main-app p {
+    cursor: default;
+}
+
+.icono-cierre {
+    width: 75%;
+    cursor: pointer;
 }
