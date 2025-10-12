@@ -10,8 +10,10 @@ document.addEventListener("DOMContentLoaded",()=>{
     const menusPublicos=document.querySelectorAll(".publico");
     const usuarioNav=document.getElementById("usuario");
 
+    const usuarioLogged=JSON.parse(sessionStorage.getItem("usuarioLogged"));
+
     Object.entries(usuarios).forEach(([clave,valor])=>{
-        if (valor.login==true){
+        if (clave==usuarioLogged.usuario){
             userLog=true;
             userName=valor.usuario;
             urlFoto=valor.foto;

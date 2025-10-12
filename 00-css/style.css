@@ -195,7 +195,11 @@ nav a{
     display: none;
 }
 
-.user-nav img:hover{
-    box-shadow: 5px 5px 5px rgb(226, 164, 193); /*del color del tema o en gris?*/
+/* .user-nav img:hover{
+    box-shadow: 5px 5px 5px rgb(226, 164, 193);
 
+} */
+
+#logout img:hover {
+    content: url(../img/login.png);
 }

@@ -9,6 +9,9 @@
     display: grid;
     grid-template-rows: 7% 93%;
     grid-template-areas: "window-header" "window-main";
+    /*para que quede por encima del nav*/
+    position: absolute;
+    top: 100px;
 }
 
 #window-header{

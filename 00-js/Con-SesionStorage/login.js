@@ -17,9 +17,12 @@ btnEnviar.addEventListener("click",()=>{
 
     Object.entries(usuarios).forEach(([clave,valor])=>{
         if (clave==user && valor.password==pass){
-            valor.login=true;
             loginCorrecto=true;
             localStorage.setItem("usuarios",JSON.stringify(usuarios));
+            const usuarioLogged={
+                usuario: valor.usuario,
+            };
+            sessionStorage.setItem("usuarioLogged",JSON.stringify(usuarioLogged));
             return;
         }
     });

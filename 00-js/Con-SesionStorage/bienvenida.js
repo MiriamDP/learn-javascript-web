@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded",()=>{
     if(welcome){
         document.getElementById("welcome").style.display="none";
     }else {
-        console.log("estoy aqui")
         document.getElementById("welcome").style.display="";
     }
 });
