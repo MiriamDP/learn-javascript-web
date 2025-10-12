@@ -19,6 +19,7 @@
         href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
         <script defer src="../../../../00-js/hora.js"></script>
+        <script defer src="../../../../00-js/Con-LocalStorage/menu.js"></script>
         <script defer src="./js/script.js"></script>
         <script defer src="./js/cookies.js"></script>
 
@@ -41,8 +42,8 @@
         <div class="icono-escritorio login-nav publico"><a href="../../../../referencias/index.html"><img src="../../../../img/login.png"><p>LogIn</p></a></div>
 
         
-        <div class="icono-escritorio user-nav privado"><a href="./logIn-logOut/index.html"><img src="../../../../img/login.png"><p>LogIn</p></a></div>
-        <div class="icono-escritorio logout-nav privado"><a href="./logIn-logOut/index.html"><img src="../../../../img/logout.png"><p>LogIn</p></a></div>
+                <div class="icono-escritorio user-nav privado"><a href="./logIn-logOut/index.html" id="enlaceUsuario"><img src="../../img/login.png"><p id="usuario"></p></a></div>
+        <div class="icono-escritorio logout-nav privado" id="logout"><a href="../../../../index.html" id="enlaceLogout"><img src="../../img/logout.png"><p>Cerrar Sesion</p></a></div>
     </nav>
     <main>
         <div id="window">

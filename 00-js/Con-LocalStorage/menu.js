@@ -35,20 +35,20 @@ document.addEventListener("DOMContentLoaded",()=>{
         menusPublicos.forEach(element=> element.style.display="block");
     }
 
-    console.log("Hola");
     //comporamiento de cerrarSession
     const logout=document.getElementById("logout");
-    console.log(logout);
     logout.addEventListener("click",(e)=>{
-        console.log("estoy dentro");
         e.preventDefault();
         Object.entries(usuarios).forEach(([clave,valor])=>{
             console.log("Usuario",valor.usuario,"Login",valor.login);
             console.log(userName);
             if (valor.usuario==userName){
                 valor.login=false;
+                console.log(valor.login);
                 localStorage.setItem("usuarios",JSON.stringify(usuarios));
-                location.reload();
+                //para que independientemente del nivel de subcarpeta en el que estemos nos lleve de nuevo al index
+                const enlaceLogout=document.getElementById("enlaceLogout");
+                window.location.href = enlaceLogout.href;
                 return;
             }
         });

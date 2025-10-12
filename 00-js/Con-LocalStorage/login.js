@@ -14,10 +14,11 @@ btnEnviar.addEventListener("click",()=>{
     const user=usuario1.value;
     const pass=password1.value;
 
+    console.log(user,pass);
+
     Object.entries(usuarios).forEach(([clave,valor])=>{
         console.log("usuario",clave);
         console.log("contraseña",valor.password);
-        console.log("Comparando:", clave, "==", usuario1, "?", clave == usuario1);
         if (clave==user && valor.password==pass){
             console.log("somos iguales");
             valor.login=true;
