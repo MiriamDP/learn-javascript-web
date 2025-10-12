@@ -5,16 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprende javascript</title>
-    <link rel="stylesheet" href="../style.css" type="text/css">
-    <link rel="stylesheet" href="../style-window.css" type="text/css">
+    <link rel="stylesheet" href="../00-css/style.css" type="text/css">
+    <link rel="stylesheet" href="../00-css/style-window.css" type="text/css">
+    <link rel="stylesheet" href="../00-css/style-form-usuario.css" type="text/css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
-        <script defer src="../js/script.js"></script>
-
+    <script defer src="../00-js/hora.js"></script>
+    <script defer src="../00-js/Con-LocalStorage/login.js"></script>
 </head>
 
 <body>
@@ -28,45 +29,30 @@
         <div id="date-time"></div>
     </header>
     <nav>
-        <div class="icono-escritorio carpeta-nav"><a href="./referencias/index.html"><img src="../img/carpetaCerrada.png"><p>Referencias</p></a></div>
-        <div class="icono-escritorio carpeta-nav"><a href="./referencias/index.html"><img src="../img/carpetaCerrada.png"><p>Ejercicios</p></a></div>
-        <div class="icono-escritorio"><a href="./referencias/index.html"><img src="../img/regristro.png"><p>Registro</p></a></div>
-        <div class="icono-escritorio login-nav"><a href="./referencias/index.html"><img src="../img/login.png"><p>LogIn</p></a></div>
+        <div class="icono-escritorio carpeta-nav"><a href="../referencias/index.html"><img src="../img/carpetaCerrada.png"><p>Referencias</p></a></div>
+        <div class="icono-escritorio carpeta-nav"><a href="../ejercicios/index.html"><img src="../img/carpetaCerrada.png"><p>Ejercicios</p></a></div>
+        <div class="icono-escritorio"><a href="../registro/index.html"><img src="../img/registro.png"><p>Registro</p></a></div>
+        <div class="icono-escritorio login-nav"><a href="../logIn-logOut/index.html"><img src="../img/logout.png"><p>LogIn</p></a></div>
     </nav>
     <main>
-        <div id="window">
-            <div id="window-header">
-                <a href="../index.html"><img src="../img/felchaAtras.png" class="icono-carpeta atras"></a>
-                <p>home/ejercicios</p>
-                <a href="../index.html"><img src="../img/cierre.png" class="icono-carpeta cierre"></a>
+        <div id="window-registro">
+            <div id="window-header-app">
+                <p>Conectate</p>
+                <a href="../index.html"><img src="../img/cierre.png" class="icono-cierre cierre"></a>
             </div>
-            <div id="window-main">
-                <div class="icono-submenu"><a href="./index.html"><img src="../img/carpetaCerrada.png"><p>DOM</p></a></div>
-                <div class="icono-submenu"><a href="./index.html"><img src="../img/carpetaCerrada.png"><p>Acceso</p></a></div>
-                <div class="icono-submenu"><a href="./index.html"><img src="../img/carpetaCerrada.png"><p>Acceso</p></a></div>
-                <div class="icono-submenu"><a href="./index.html"><img src="../img/carpetaCerrada.png"><p>Acceso</p></a></div>
-                <div class="icono-submenu"><a href="./index.html"><img src="../img/carpetaCerrada.png"><p>Acceso</p></a></div>
-                <div class="icono-submenu"><a href="./index.html"><img src="../img/carpetaCerrada.png"><p>Acceso</p></a></div>
-                <div class="icono-submenu"><a href="./index.html"><img src="../img/carpetaCerrada.png"><p>Acceso</p></a></div>
-                <div class="icono-submenu"><a href="./index.html"><img src="../img/carpetaCerrada.png"><p>Acceso</p></a></div>
-                <div class="icono-submenu"><a href="./index.html"><img src="../img/carpetaCerrada.png"><p>Acceso</p></a></div>
-                <div class="icono-submenu"><a href="./index.html"><img src="../img/carpetaCerrada.png"><p>Acceso</p></a></div>
-                <div class="icono-submenu"><a href="./index.html"><img src="../img/carpetaCerrada.png"><p>Acceso</p></a></div>
-                <div class="icono-submenu"><a href="./index.html"><img src="../img/carpetaCerrada.png"><p>Acceso</p></a></div>
-                <div class="icono-submenu"><a href="./index.html"><img src="../img/carpetaCerrada.png"><p>Acceso</p></a></div>
-                <div class="icono-submenu"><a href="./index.html"><img src="../img/carpetaCerrada.png"><p>Acceso</p></a></div>
-                <div class="icono-submenu"><a href="./index.html"><img src="../img/carpetaCerrada.png"><p>Acceso</p></a></div>
-                <div class="icono-submenu"><a href="./index.html"><img src="../img/carpetaCerrada.png"><p>Acceso</p></a></div>
-                <div class="icono-submenu"><a href="./index.html"><img src="../img/carpetaCerrada.png"><p>Acceso</p></a></div>
-                <div class="icono-submenu"><a href="./index.html"><img src="../img/carpetaCerrada.png"><p>Acceso</p></a></div>
-                <div class="icono-submenu"><a href="./index.html"><img src="../img/carpetaCerrada.png"><p>Acceso</p></a></div>
-                <div class="icono-submenu"><a href="./index.html"><img src="../img/carpetaCerrada.png"><p>Acceso</p></a></div>
-                <div class="icono-submenu"><a href="./index.html"><img src="../img/carpetaCerrada.png"><p>Acceso</p></a></div>
-                <div class="icono-submenu"><a href="./index.html"><img src="../img/carpetaCerrada.png"><p>Acceso</p></a></div>
-                <!-- <a href="./index.html"><div class="icono-submenu"><img src="../img/carpetaCerrada.png"><p>Acceso</p></div></a> -->
+            <div id="window-main-app">
+                <p>Conectate a nuestro servidor para obtener acceso a todo el contenido</p>
+                <br>
+                <form id="formulario">
+                    <label>Usuario: </label>
+                    <input type="text"  name="usuario" id="usuario" autofocus required>
+                    <label>Contraseña: </label>
+                    <input type="password"  name="password" id="password" required>
+                </form>
+                <button class="btn" id="conectar">Conectar</button>
+                <div id="resultado"></div>
             </div>
         </div>
-
     </main>
 
     <footer>

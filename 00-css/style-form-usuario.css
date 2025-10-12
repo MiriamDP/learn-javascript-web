@@ -3,6 +3,7 @@ form{
     display: grid;
     grid-template-columns: 30% 70%;
     align-items: center;
+    width: 100%;
 }
 
 label, input {

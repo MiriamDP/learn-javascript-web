@@ -1,7 +1,6 @@
 //el mensaje de bienvenida solo se mostrara la primera vez que se entre en la sesion. Por ello se ha decido usar sessionStorage
 document.addEventListener("DOMContentLoaded",()=>{
 
-    console.log(sessionStorage.getItem("bienvenido"));
     let welcome=false;
     const claves=Object.keys(sessionStorage);
     for (const clave of claves){
