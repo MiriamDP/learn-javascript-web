@@ -29,7 +29,7 @@ btnEnviar.addEventListener("click",()=>{
     });
 
     if (loginCorrecto){
-        resultado.innerHTML=`<p>Bienvenido ${usuario1}</p>`;
+        resultado.innerHTML=`<p>Bienvenido ${user}. Redirigiendo al Inicio...</p>`;
         setTimeout(()=>{
             window.location.href="../index.html";
         },1500);

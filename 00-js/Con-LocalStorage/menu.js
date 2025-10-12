@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     const usuarios=JSON.parse(localStorage.getItem("usuarios")) || {};
     let userLog=false;
     let userName;
+    let urlFoto;
 
     const menusPrivados=document.querySelectorAll(".privado");
     const menusPublicos=document.querySelectorAll(".publico");
@@ -13,6 +14,7 @@ document.addEventListener("DOMContentLoaded",()=>{
         if (valor.login==true){
             userLog=true;
             userName=valor.usuario;
+            urlFoto=valor.foto;
             return;
         }
     });
@@ -30,6 +32,18 @@ document.addEventListener("DOMContentLoaded",()=>{
         enlaceUsuario.addEventListener("mouseenter",()=>{
             enlaceUsuario.style.cursor = "default";
         });
+        //cambio imagen usuario
+        const fotoUsuario=document.getElementById("fotoUsuario");
+        if (fotoUsuario!="fotoPorDefecto"){
+            fotoUsuario.src=urlFoto;
+        }
+        //Para darle estilo a la imagen
+        fotoUsuario.style.objectFit="cover";
+        fotoUsuario.style.borderRadius="50%";
+        fotoUsuario.style.margin="3%";
+        fotoUsuario.style.paddingBottom="5%";
+        
+        
     }else {
         menusPrivados.forEach(element=> element.style.display="none");
         menusPublicos.forEach(element=> element.style.display="block");
@@ -37,7 +51,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     //comporamiento de cerrarSession
     const logout=document.getElementById("logout");
-    logout.addEventListener("click",(e)=>{
+    logout?.addEventListener("click",(e)=>{
         e.preventDefault();
         Object.entries(usuarios).forEach(([clave,valor])=>{
             console.log("Usuario",valor.usuario,"Login",valor.login);

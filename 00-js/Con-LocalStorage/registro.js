@@ -45,7 +45,7 @@ function usuarioExiste(usuarioClave){
 async function guardarUsuario(usuario){
     let usuarios = JSON.parse(localStorage.getItem("usuarios")) || {};
     if (usuario.foto==null){
-        usuario.foto="../../img/usuarioDefecto.png"; //url de la foto por defecto
+        usuario.foto="fotoPorDefecto";
     }else {
         usuario.foto=await fotoAData(usuario.foto); //sustituimos el fichero de la foto por la url
     }
