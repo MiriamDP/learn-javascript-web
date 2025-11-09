@@ -54,7 +54,7 @@ btnSignUp.addEventListener("click",async ()=>{
 
     let photo;
     if (userPhoto.files[0]==null){ 
-        photo="http://localhost:4300/learn-javascript-web/img/usuarioDefecto.png";
+        photo="./img/usuarioDefecto.png";
     }else{
         if(userPhoto.files[0].type.startsWith("image/")){
             photo=userPhoto.files[0];

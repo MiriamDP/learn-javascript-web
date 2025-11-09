@@ -22,7 +22,7 @@ function openDataBase(){
                     nombre: "admin",
                     usuario: "admin",
                     password: "dejameya",
-                    foto: "http://localhost:4300/learn-javascript-web/img/usuarioDefecto.png",
+                    foto: "./img/usuarioDefecto.png",
                     rol: "administrador", 
                     estado: false, 
                     keepConnect: false 
