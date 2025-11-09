@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded",async ()=>{
             }
             fotoUsuario.src=urlTemp;
         }else {
-            fotoUsuario.src=user.foto;
+            fotoUsuario.src=user.foto; //si estamos mas adentro del dom la url si es de la foto por defecto ./img/usuarioDefecto no es valida en el source
             //aqui comprobaremos si es la foto por defecto o una url
         }
         // if (user.foto!="fotoPorDefecto"){
