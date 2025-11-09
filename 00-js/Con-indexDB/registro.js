@@ -17,7 +17,7 @@ btnSend.addEventListener("click",async ()=>{
     let photo;
     //validacion foto
     if (userPhoto.files[0]==null){ //esto es que el usuario no ha introducido foto
-        photo="http://localhost:4300/learn-javascript-web/img/usuarioDefecto.png"; //ESTA URL ESTA MAL
+        photo="./img/usuarioDefecto.png";
     }else{
         //validacion extra. aunque en un principio el usuario puede subir solo images este puede manipularlo a traves del inspector o herramientas como postman
         //para evitar esto vamos a validar tambien desde aqui que sea un fichero de imagen valido
