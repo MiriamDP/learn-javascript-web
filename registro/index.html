@@ -16,8 +16,11 @@
         rel="stylesheet">
     <script defer src="../00-js/hora.js"></script>
     <!--Elige uno u otro de los de scripts inferiores si quieres trabajar solo con Local o con Local+Session-->
-    <script defer src="../00-js/Con-LocalStorage/registro.js"></script>
+    <!-- <script defer src="../00-js/Con-LocalStorage/registro.js"></script> -->
     <!-- <script defer src="../00-js/Con-SesionStorage/registro.js"></script> -->
+    <script defer src="../00-js/Con-indexDB/indexdb.js"></script>
+    <script defer src="../00-js/Con-indexDB/userExists.js"></script>
+    <script defer src="../00-js/Con-indexDB/registro.js"></script>
 
 </head>
 
@@ -39,6 +42,8 @@
         <!--Aqui tampoco hacen falta tal y como funciona la pagina-->
         <!-- <div class="icono-escritorio user-nav privado"><a href="#" id="enlaceUsuario"><img src="../img/login.png"><p id="usuario">Usuario</p></a></div> -->
         <!-- <div class="icono-escritorio logout-nav privado" id="logout"><a href="../index.html"><img src="../img/logout.png"><p>Cerrar Sesion</p></a></div> -->
+        <!-- <div class="icono-escritorio logout-nav admin"><a href="./crudUsuarios/index.html"><img src="./img/exe2.png"><p>Administrar</p></a></div> -->
+
     </nav>
     <main>
         <div id="window-registro">

@@ -16,9 +16,11 @@
         rel="stylesheet">
     <script defer src="../00-js/hora.js"></script>
     <!--Elige uno u otro de los scripts inferiores si quieres trabajar solo con Local o con Local+Session-->
-    <script defer src="../00-js/Con-LocalStorage/login.js"></script>
+    <!-- <script defer src="../00-js/Con-LocalStorage/login.js"></script> -->
     <!-- <script defer src="../00-js/Con-SesionStorage/login.js"></script> -->
-
+    <script defer src="../00-js/Con-indexDB/indexdb.js"></script>
+    <script defer src="../00-js/Con-indexDB/login.js"></script>
+    
 </head>
 
 <body>
@@ -51,6 +53,7 @@
                     <input type="text"  name="usuario" id="usuario" autofocus required>
                     <label>Contraseña: </label>
                     <input type="password"  name="password" id="password" required>
+                    <input type="checkbox" name="keepConnect" id="keepConnect"> <label>Seguir conectado</label>
                 </form>
                 <button class="btn" id="conectar">Conectar</button>
                 <div id="resultado"></div>

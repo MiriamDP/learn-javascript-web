@@ -1,0 +1,174 @@
+#popup-add, #popup-update{
+    width: 50%;
+    height: 80%;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    z-index: 2;
+    position: absolute;
+    top: 10%;
+    right: 25%;
+    display: grid;
+    grid-template-rows: 7% 93%;
+    grid-template-areas: "header" "form";
+    display: none;
+}
+
+#popup-header {
+    grid-area: header;
+    border-radius: 10px 10px 10px 10px;
+    border-bottom: 3px solid black;
+    padding: 5px 0;
+    text-align: center;
+    background-color: rgb(243, 128, 182);
+    display: grid;
+    grid-template-columns:95% 5%;
+    grid-template-columns:95% 5%;
+    border-radius: 8px 8px 0px 0px;
+    align-items: center;
+}
+
+#popup-header p{
+    font-weight: bold;
+    color: white;
+    cursor: default;
+    justify-content: center;
+}
+
+#popup-header img{
+    height: 100%;
+    width: 100%;
+}
+
+
+#popup-form,#popup-form-upd{
+    grid-area: form;
+}
+
+#popup-form-add,#popup-form-update{
+    margin-top: 10px;
+    padding: 2%;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+    width: 100%;
+}
+
+label, input {
+    margin: 5px 0px;
+    width: 100%;
+    height: 50px;
+}
+
+label {
+    display: flex;
+    align-items: center;
+}
+
+input{
+    border-color: rgb(243, 128, 182);
+    border-radius: 10px;
+    border-style: solid;
+}
+
+input:focus {
+    border-color: rgb(163, 38, 96);
+    /* background-color: rgb(245, 180, 210); */
+    outline: none;
+}
+
+input[type="checkbox"]{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgb(243, 128, 182);
+    border-radius: 4px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+input[type="checkbox"]:checked{
+    appearance: none;
+    background-color: rgb(241, 81, 156);
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 12 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 5l3 3 7-7' stroke='white' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    border-color: rgb(243, 128, 182);
+}
+
+.btn {
+    font-weight: bold;
+    color: white;
+    background-color: rgb(243, 128, 182);
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    cursor: pointer;
+    margin-left: 75%;
+    margin-top: 2.5%;
+
+}
+
+.btn:hover{
+    background-color: rgb(241, 81, 156);
+}
+
+#preview{
+    border-radius: 50%;
+    border: 3px solid rgb(241, 81, 156);
+}
+
+#popup-form-upd{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 75% 15% 10%;
+    grid-template-areas: "formulario formulario" "imagen boton" "mensaje mensaje";
+}
+
+#popup-form-update{
+    grid-area: formulario;
+}
+
+#popup-form-upd button{
+    grid-area: boton;
+    margin: 2%;
+}
+#popup-form-upd #preview{
+    grid-area: imagen;
+    height: 60px;
+    aspect-ratio: 1;
+    margin: 2%;
+    justify-content: center;
+}
+
+#imgPreview{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+#popup-form-upd p{
+    grid-area: mensaje;
+}
+
+#resultado2{
+    padding: 1%;
+}
+
+#popup-delete{
+    display: none;
+    width: 50%;
+    top: 40%;
+    left: 25%;
+    border: 3px solid black;
+    border-radius: 10px;
+    position: fixed;
+}
+
+#popup-delete-main{
+    padding: 2%;
+    background-color: white;
+}
+
+

@@ -1,0 +1,22 @@
+La aplicacion simula ser un escritorio de ordenador.
+Existe un administrador por defecto creado en el sistema con las credenciales
+usuario=admin
+contraseña=dejameya
+
+Los usuario pueden tener dos roles administrador o usuario. Los usuarios administradores tienen acceso a la base de datos de usuario pudiendo añadir, modificar o borrar usuarios, tambien pueden buscar por nombre o usuario. Ademas pueden acceder a todo el contenido de los ejercicios.
+Los usuarios usuarios solo pueden acceder a los ejercicios.
+Ambos tipos de usuarios pueden cambiar sus datos desde el enlace con su nombre y foto.
+
+Los usuario tienen los siguientes atributos
+usuario: que debe ser unico
+nombre
+contraseña
+foto
+rol: es de tipo string e indica si son usuario o administradores
+estado: es booleano e indica si el usuario esta conectado. De momento no tienen ninguna funcionalidad asociada pero si la aplicacion estuviese alojada varios 
+    usuarios podrian estar conectados desde diversos terminales por lo que conocer este dato podria ser util en caso de que alguien intentase entrar con un usuario ya logeado
+keepConnect: es booleano, indica si el usuario quiere mantener o no la sesion abierta. Si quiere mantener abierta las credenciales de sesion se guardaran en localStorage mientras que 
+    si indica que no se guardaran en sessionStorage
+
+
+Siempre debera haber un administrador en la web por lo que se tiene una prevencion de borrado de administradores en caso de que solo haya uno.

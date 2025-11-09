@@ -3,7 +3,7 @@ const tooltip = document.getElementById('detalle');
 const items = document.querySelectorAll('.aditional-info');
 
 items.forEach(item => {
-    item.addEventListener('mouseenter', (e) => {
+    item.addEventListener('mouseenter', () => {
         const text = item.getAttribute('data-tooltip');
         tooltip.innerText = text;
         tooltip.style.display = 'block';

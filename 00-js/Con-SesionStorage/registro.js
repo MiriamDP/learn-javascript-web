@@ -15,6 +15,7 @@ btnEnviar.addEventListener("click", async()=>{
         usuario: usuario1.value,
         password: password1.value,
         foto: fotoPerfil1.files[0],
+        login: false, //se ha dejado este atributo aunque en esta version no haria falta para que los usuarios que se creen con esta modalidad sean compatibles con los usuarios que se crean con la modalidad de LocalStorage
     }
 
     if (usuarioExiste(user.usuario)){

@@ -1,0 +1,213 @@
+#window-dragon {
+    height: 90vh;
+    width: 100%;
+    background-color: white;
+    margin-top: 15px;
+    border: 3px solid black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px rgb(226, 164, 193);
+    display: grid;
+    grid-template-rows: 5% 95%;
+    grid-template-areas: "window-header" "window-main";
+    position: absolute;
+    top: 50px;
+}
+
+
+/*-----------------------------HEADER--------------------*/
+#window-header-dragon{
+
+    grid-area: window-header;
+    border-bottom: 3px solid black;
+    background-color: rgb(243, 128, 182);
+
+    display: grid;
+    grid-template-columns:90% 10%;
+    grid-template-rows: 100%;
+    text-align: center;
+    padding: 5px 0;
+    /*padding: 0; */
+}
+
+#window-header-dragon p{
+    grid-column: 1;
+    grid-row: 1;
+    font-weight: bold;
+    color: white;
+    cursor: default;
+    align-self: center;
+}
+
+#window-header-dragon a{
+    padding: 0 10px;
+    justify-self: end;
+    grid-row: 1;
+    grid-column: 2;
+}
+
+a .icono-cierre {
+    height: 100%;
+    width: auto;
+}
+
+.cierre:hover {
+    content: url(../../img/cierre2.png);
+}
+
+/*------------------------------MAIN-------------------------------*/
+#window-main-dragon{
+    grid-area: window-main;
+    display: grid;
+    grid-template-rows: 10% 90%;
+    grid-template-columns: 100%;
+    grid-template-areas: "formulario" "resultados"; /*personajes detalle transformaciones detalleTrans*/
+}
+
+#form-area{
+    grid-area: formulario;
+    border-bottom: 3px solid rgb(241, 81, 156);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+#formulario{
+    height: 100%;
+    align-content: center;
+}
+
+select{
+    border: 3px solid  rgb(243, 128, 182);
+    height: 75%;
+    border-radius: 10px;
+    padding: 5px;
+    outline: none;
+}
+
+select:focus{
+    border-color: rgb(241, 81, 156);
+}
+
+.btn{
+    font-weight: bold;
+    color: white;
+    background-color: rgb(243, 128, 182);
+    border: none;
+    border-radius: 10px;
+    height: 75%;
+    cursor: pointer;
+    padding: 0 20px;
+}
+
+.btn:hover{
+    background-color: rgb(241, 81, 156);
+}
+
+/*--------------------RESULTADOS--------------*/
+
+#results{
+    grid-area: resultados;
+    display: flex;
+}
+
+.hidden{
+    display: none;
+}
+
+#personajes, #personaje-info, #personaje-trans, #personaje-trans-info{
+    height: 100%;
+}
+
+/*-------------------------PERSONAJES--------------*/
+.cardArea{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5%;
+    padding: 20px;
+    width: 100%;
+    overflow: scroll;
+    align-content: flex-start;
+}
+
+.cardChar{
+    width: fit-content;
+    height: 25%;
+    border: 2px solid  rgb(241, 81, 156);
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+
+.cardChar img{
+    display: block;
+    height: 90%;
+    width: auto;
+    margin: auto;
+}
+
+.cardChar p{
+    text-align: center;
+    padding: 10px 0;
+    color: rgb(241, 81, 156);
+}
+
+/*-----------------------------INFO PERSONAJE----------------*/
+.cardInfo{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% 50% 40%;
+    grid-template-areas: "titulo titulo" "foto info" "descripcion descripcion";
+    padding: 10px;
+}
+
+.cardTitle{
+    grid-area: titulo;
+    text-align: center;
+    align-content: center;
+    color: rgb(241, 81, 156);
+}
+
+.cardInfoFoto{
+    grid-area: foto;
+    height: 100%;
+    width: auto;
+    justify-self: center;
+    padding: 20px;
+}
+
+.cardInfoArea{
+    grid-area: info;
+    padding: 20px;
+}
+
+.cardDesc{
+    grid-area: descripcion;
+    padding: 20px;
+    overflow: scroll;
+}
+
+/*-------------------------TRANSFORMACION------------------*/
+#personaje-trans-info div{
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#personaje-trans-info div p {
+    text-align: center;
+    color: rgb(241, 81, 156);
+    font-weight: bold;
+}
+
+#personaje-trans-info div img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}

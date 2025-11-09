@@ -1,17 +1,26 @@
+:root{ /*OJO cambia de tamaño las imagenes porque box-sizing no se hereda. :root es equvalente a html solo que su especificidad es mayor*/
+    /* margin: 0;  No se hereda*/
+    font-family: "Roboto mono";
+    /* box-sizing: border-box; No se hereda*/
+    background-image: url("../img/Fondo.jpg");
+    --primary-color: rgb(243, 128, 182);
+
+
+}
+
 *{
     margin: 0;
-    font-family: "Roboto mono";
     box-sizing: border-box;
 }
 
-html {
+/* html {
     background-image: url("../img/Fondo.jpg");
-}
+} */
 
 header{
     margin: 10px;
     height: 40px;
-    border: 3px solid rgb(243, 128, 182);
+    border: 3px solid var(--primary-color);
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
@@ -21,7 +30,7 @@ header{
 }
 
 header h2{
-    color: rgb(243, 128, 182);
+    color: var(--primary-color);
 }
 
 header ul {
@@ -80,7 +89,7 @@ main {
 #welcome-btn{
     font-weight: bold;
     color: white;
-    background-color: rgb(243, 128, 182);
+    background-color: var(--primary-color);
     border: none;
     border-radius: 10px;
     height: 50px;
@@ -115,7 +124,7 @@ footer {
 }
 
 #inicio {
-    background: linear-gradient(rgb(243, 128, 182),rgb(158, 64, 108),rgb(243, 128, 182)); /*Me gustaria que la zona oscura fuese mas ancha*/
+    background: linear-gradient(var(--primary-color),rgb(158, 64, 108),var(--primary-color)); /*Me gustaria que la zona oscura fuese mas ancha*/
     border-radius: 0 5% 5% 0;
     width: 100%;
     display: flex;
@@ -140,6 +149,7 @@ nav {
     align-items: flex-start;
     row-gap: 1%;
     padding: 0 2%;
+    gap: 3.5%;
 }
 
 nav a{
@@ -163,13 +173,11 @@ nav a{
 
 .icono-escritorio p {
     font-weight: bold;
-    color: rgb(243, 128, 182);
+    color: var(--primary-color);
     justify-self: center;
     margin-top: -10px;
     padding-top: 0;
 }
-
-
 
 .carpeta-nav:hover img{
     content: url(../img/carpetaabierta3.png);
@@ -202,4 +210,12 @@ nav a{
 
 #logout img:hover {
     content: url(../img/login.png);
+}
+
+.admin img:hover{
+    content: url(../img/exe.png);
+}
+
+.admin{
+    display: none;
 }
